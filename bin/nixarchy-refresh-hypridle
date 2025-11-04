@@ -1,4 +1,0 @@
-#!/bin/bash
-
-nixarchy-refresh-config hypr/hypridle.conf
-nixarchy-restart-hypridle

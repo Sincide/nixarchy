@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+archy-snapshot create || [ $? -eq 127 ]
+archy-update-git
+archy-migrate
+archy-update-system-pkgs
+archy-update-restart
+archy-restart-waybar # removes update-available icon

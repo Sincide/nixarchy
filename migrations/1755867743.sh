@@ -1,4 +1,4 @@
-echo "Copy Nixarchy logo to ~/.config/nixarchy/branding/screensaver.txt so screensaver can be personalized"
+echo "Copy Archy logo to ~/.config/archy/branding/screensaver.txt so screensaver can be personalized"
 
-mkdir -p ~/.config/nixarchy/branding
-cp $NIXARCHY_PATH/logo.txt ~/.config/nixarchy/branding/screensaver.txt
+mkdir -p ~/.config/archy/branding
+cp $ARCHY_PATH/logo.txt ~/.config/archy/branding/screensaver.txt

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+archy-refresh-config hypr/hyprsunset.conf
+archy-restart-hyprsunset

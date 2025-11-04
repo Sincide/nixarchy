@@ -1,0 +1,4 @@
+#!/bin/bash
+
+archy-refresh-config hypr/hypridle.conf
+archy-restart-hypridle

@@ -1,10 +1,10 @@
 echo "Change reload Waybar on unlock command to prevent stacking"
 
-if ! grep -q 'on_unlock_cmd *= *nixarchy-restart-waybar' ~/.config/hypr/hypridle.conf; then
+if ! grep -q 'on_unlock_cmd *= *archy-restart-waybar' ~/.config/hypr/hypridle.conf; then
   sed -i \
     '/^    on_unlock_cmd = pkill -SIGUSR2 waybar[[:space:]]*# prevent stacking of waybar when waking$/c\
-    on_unlock_cmd = nixarchy-restart-waybar  # prevent stacking of waybar when waking' \
+    on_unlock_cmd = archy-restart-waybar  # prevent stacking of waybar when waking' \
     ~/.config/hypr/hypridle.conf
 
-  nixarchy-restart-waybar
+  archy-restart-waybar
 fi

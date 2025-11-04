@@ -1,2 +1,2 @@
 echo "Update Walker config"
-nixarchy-refresh-walker
+archy-refresh-walker

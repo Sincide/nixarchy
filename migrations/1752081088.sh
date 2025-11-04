@@ -1,2 +1,2 @@
 echo "Permanently fix F-keys on Apple-mode keyboards (like Lofree Flow84)"
-source ~/nixarchy/install/config/hardware/fix-fkeys.sh
+source ~/archy/install/config/hardware/fix-fkeys.sh

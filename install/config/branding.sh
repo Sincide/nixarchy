@@ -1,6 +1,6 @@
 #!/bin/bash
 
 # Allow the user to change the branding for fastfetch and screensaver
-mkdir -p ~/.config/nixarchy/branding
-cp ~/nixarchy/icon.txt ~/.config/nixarchy/branding/about.txt
-cp ~/nixarchy/logo.txt ~/.config/nixarchy/branding/screensaver.txt
+mkdir -p ~/.config/archy/branding
+cp ~/archy/icon.txt ~/.config/archy/branding/about.txt
+cp ~/archy/logo.txt ~/.config/archy/branding/screensaver.txt

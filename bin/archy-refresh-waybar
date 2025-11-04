@@ -1,0 +1,5 @@
+#!/bin/bash
+
+archy-refresh-config waybar/config.jsonc
+archy-refresh-config waybar/style.css
+archy-restart-waybar

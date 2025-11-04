@@ -1,8 +1,8 @@
-echo "Add new Nixarchy Menu icon to Waybar"
+echo "Add new Archy Menu icon to Waybar"
 
 mkdir -p ~/.local/share/fonts
-cp ~/nixarchy/config/nixarchy.ttf ~/.local/share/fonts/
+cp ~/archy/config/archy.ttf ~/.local/share/fonts/
 fc-cache
 
 echo
-gum confirm "Replace current Waybar config (backup will be made)?" && nixarchy-refresh-waybar
+gum confirm "Replace current Waybar config (backup will be made)?" && archy-refresh-waybar

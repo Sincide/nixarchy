@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nixarchy-refresh-applications
+archy-refresh-applications
 update-desktop-database ~/.local/share/applications
 
 # Open all images with imv

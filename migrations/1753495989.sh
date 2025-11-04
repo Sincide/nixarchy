@@ -1,5 +1,5 @@
-echo "Allow updating of timezone by right-clicking on the clock (or running nixarchy-cmd-tzupdate)"
+echo "Allow updating of timezone by right-clicking on the clock (or running archy-cmd-tzupdate)"
 if ! command -v tzupdate &>/dev/null; then
-  bash ~/nixarchy/install/config/timezones.sh
-  nixarchy-refresh-waybar
+  bash ~/archy/install/config/timezones.sh
+  archy-refresh-waybar
 fi

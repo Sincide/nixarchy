@@ -1,5 +1,5 @@
 echo "Add the new ristretto theme as an option"
 
-if [[ ! -L ~/.config/nixarchy/themes/ristretto ]]; then
-  ln -nfs ~/nixarchy/themes/ristretto ~/.config/nixarchy/themes/
+if [[ ! -L ~/.config/archy/themes/ristretto ]]; then
+  ln -nfs ~/archy/themes/ristretto ~/.config/archy/themes/
 fi

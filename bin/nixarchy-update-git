@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo -e "\e[32mUpdate Nixarchy\e[0m"
-git -C $NIXARCHY_PATH pull --autostash
-git -C $NIXARCHY_PATH diff --check || git -C $NIXARCHY_PATH reset --merge

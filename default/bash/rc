@@ -1,7 +1,7 @@
-source ~/nixarchy/default/bash/shell
-source ~/nixarchy/default/bash/aliases
-source ~/nixarchy/default/bash/functions
-source ~/nixarchy/default/bash/prompt
-source ~/nixarchy/default/bash/init
-source ~/nixarchy/default/bash/envs
-[[ $- == *i* ]] && bind -f ~/nixarchy/default/bash/inputrc
+source ~/archy/default/bash/shell
+source ~/archy/default/bash/aliases
+source ~/archy/default/bash/functions
+source ~/archy/default/bash/prompt
+source ~/archy/default/bash/init
+source ~/archy/default/bash/envs
+[[ $- == *i* ]] && bind -f ~/archy/default/bash/inputrc

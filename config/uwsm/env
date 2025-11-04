@@ -1,5 +1,5 @@
-export NIXARCHY_PATH=$HOME/nixarchy
-export PATH=$NIXARCHY_PATH/bin/:$PATH
+export ARCHY_PATH=$HOME/archy
+export PATH=$ARCHY_PATH/bin/:$PATH
 export TERMINAL=alacritty
 
 if command -v mise &> /dev/null; then

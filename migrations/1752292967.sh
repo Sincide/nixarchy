@@ -14,5 +14,5 @@ if ! command -v uwsm &>/dev/null; then
     sed -i 's/^GTK_IM_MODULE=fcitx$//' "$HOME/.config/environment.d/fcitx.conf"
   fi
 
-  source ~/nixarchy/install/login/plymouth.sh
+  source ~/archy/install/login/plymouth.sh
 fi

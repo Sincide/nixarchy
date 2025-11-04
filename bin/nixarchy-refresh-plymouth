@@ -1,6 +1,0 @@
-#!/bin/bash
-
-if [[ "$1" == "-y" ]]; then
-  sudo cp ~/nixarchy/default/plymouth/* /usr/share/plymouth/themes/nixarchy/
-  sudo plymouth-set-default-theme -R nixarchy
-fi

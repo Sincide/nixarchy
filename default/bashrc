@@ -1,6 +1,6 @@
-# All the default Nixarchy aliases and functions
+# All the default Archy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
-source ~/nixarchy/default/bash/rc
+source ~/archy/default/bash/rc
 
 # Add your own exports, aliases, and functions here.
 #

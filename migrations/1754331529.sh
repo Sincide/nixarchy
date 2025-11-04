@@ -1,5 +1,5 @@
-echo "Update Waybar for new Nixarchy menu"
+echo "Update Waybar for new Archy menu"
 
 if ! grep -q "" ~/.config/waybar/config.jsonc; then
-  nixarchy-refresh-waybar
+  archy-refresh-waybar
 fi

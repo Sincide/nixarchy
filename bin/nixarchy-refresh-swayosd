@@ -1,5 +1,0 @@
-#!/bin/bash
-
-nixarchy-refresh-config swayosd/config.toml
-nixarchy-refresh-config swayosd/style.css
-nixarchy-restart-swayosd

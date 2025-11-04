@@ -1,3 +1,3 @@
 echo "Turn on the screensaver by default again now that TTE has been fixed"
 
-nixarchy-refresh-hypridle
+archy-refresh-hypridle

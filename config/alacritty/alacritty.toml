@@ -1,4 +1,4 @@
-general.import = [ "~/.config/nixarchy/current/theme/alacritty.toml" ]
+general.import = [ "~/.config/archy/current/theme/alacritty.toml" ]
 
 [env]
 TERM = "xterm-256color"

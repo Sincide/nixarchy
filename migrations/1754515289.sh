@@ -1,4 +1,4 @@
-echo "Update and restart Walker to resolve stuck Nixarchy menu"
+echo "Update and restart Walker to resolve stuck Archy menu"
 
 sudo pacman -Sy --noconfirm walker-bin
-nixarchy-restart-walker
+archy-restart-walker

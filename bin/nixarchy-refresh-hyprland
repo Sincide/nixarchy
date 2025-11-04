@@ -1,7 +1,0 @@
-#!/bin/bash
-
-nixarchy-refresh-config hypr/autostart.conf
-nixarchy-refresh-config hypr/bindings.conf
-nixarchy-refresh-config hypr/envs.conf
-nixarchy-refresh-config hypr/input.conf
-nixarchy-refresh-config hypr/hyprland.conf

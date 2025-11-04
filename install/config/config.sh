@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Symlink Nixarchy configs
+# Symlink Archy configs
 mkdir -p ~/.config
 
-# Symlink each config directory/file from ~/nixarchy/config to ~/.config
+# Symlink each config directory/file from ~/archy/config to ~/.config
 # Skip nvim as it's handled specially by lazyvim.sh (merged with LazyVim starter)
-for item in ~/nixarchy/config/*; do
+for item in ~/archy/config/*; do
   if [ -e "$item" ]; then
     target_name=$(basename "$item")
 
@@ -24,6 +24,6 @@ for item in ~/nixarchy/config/*; do
   fi
 done
 
-# Symlink bashrc from Nixarchy
+# Symlink bashrc from Archy
 rm -f ~/.bashrc
-ln -sf ~/nixarchy/default/bashrc ~/.bashrc
+ln -sf ~/archy/default/bashrc ~/.bashrc

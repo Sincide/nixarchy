@@ -1,4 +1,0 @@
-#!/bin/bash
-
-nixarchy-refresh-config hypr/hyprsunset.conf
-nixarchy-restart-hyprsunset

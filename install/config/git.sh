@@ -9,10 +9,10 @@ git config --global pull.rebase true
 git config --global init.defaultBranch master
 
 # Set identification from install inputs
-if [[ -n "${NIXARCHY_USER_NAME//[[:space:]]/}" ]]; then
-  git config --global user.name "$NIXARCHY_USER_NAME"
+if [[ -n "${ARCHY_USER_NAME//[[:space:]]/}" ]]; then
+  git config --global user.name "$ARCHY_USER_NAME"
 fi
 
-if [[ -n "${NIXARCHY_USER_EMAIL//[[:space:]]/}" ]]; then
-  git config --global user.email "$NIXARCHY_USER_EMAIL"
+if [[ -n "${ARCHY_USER_EMAIL//[[:space:]]/}" ]]; then
+  git config --global user.email "$ARCHY_USER_EMAIL"
 fi

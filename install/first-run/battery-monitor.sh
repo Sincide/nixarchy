@@ -5,7 +5,7 @@ if ls /sys/class/power_supply/BAT* &>/dev/null; then
   powerprofilesctl set balanced || true
 
   # Enable battery monitoring timer for low battery notifications
-  systemctl --user enable --now nixarchy-battery-monitor.timer
+  systemctl --user enable --now archy-battery-monitor.timer
 else
   # This computer runs on power outlet
   powerprofilesctl set performance || true

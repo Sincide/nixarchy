@@ -1,3 +1,3 @@
 echo "Fix the expand icon margin in the Waybar style"
 
-nixarchy-refresh-config waybar/style.css
+archy-refresh-config waybar/style.css
