@@ -7,7 +7,7 @@ STATE_DIR="$HOME/.local/state/nixarchy/migrations"
 mkdir -p "$STATE_DIR"
 
 # Run any pending migrations
-for file in ~/.local/share/nixarchy/migrations/*.sh; do
+for file in ~/nixarchy/migrations/*.sh; do
   filename=$(basename "$file")
 
   if [[ ! -f "$STATE_DIR/$filename" ]]; then

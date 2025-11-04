@@ -1,7 +1,7 @@
-source ~/.local/share/nixarchy/default/bash/shell
-source ~/.local/share/nixarchy/default/bash/aliases
-source ~/.local/share/nixarchy/default/bash/functions
-source ~/.local/share/nixarchy/default/bash/prompt
-source ~/.local/share/nixarchy/default/bash/init
-source ~/.local/share/nixarchy/default/bash/envs
-[[ $- == *i* ]] && bind -f ~/.local/share/nixarchy/default/bash/inputrc
+source ~/nixarchy/default/bash/shell
+source ~/nixarchy/default/bash/aliases
+source ~/nixarchy/default/bash/functions
+source ~/nixarchy/default/bash/prompt
+source ~/nixarchy/default/bash/init
+source ~/nixarchy/default/bash/envs
+[[ $- == *i* ]] && bind -f ~/nixarchy/default/bash/inputrc

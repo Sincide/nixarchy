@@ -1,4 +1,4 @@
-export NIXARCHY_PATH=$HOME/.local/share/nixarchy
+export NIXARCHY_PATH=$HOME/nixarchy
 export PATH=$NIXARCHY_PATH/bin/:$PATH
 export TERMINAL=alacritty
 

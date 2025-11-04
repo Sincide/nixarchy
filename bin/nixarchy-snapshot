@@ -1,7 +1,7 @@
 #!/bin/bash
 
 COMMAND="$1"
-NIXARCHY_PATH=${NIXARCHY_PATH:-$HOME/.local/share/nixarchy}
+NIXARCHY_PATH=${NIXARCHY_PATH:-$HOME/nixarchy}
 
 if [[ -z $COMMAND ]]; then
   echo "Usage: nixarchy-snapshot <create|restore>" >&2

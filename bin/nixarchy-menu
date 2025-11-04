@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="$HOME/.local/share/nixarchy/bin:$PATH"
+export PATH="$HOME/nixarchy/bin:$PATH"
 
 menu() {
   local prompt="$1"
