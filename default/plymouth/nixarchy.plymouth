@@ -1,0 +1,9 @@
+[Plymouth Theme]
+Name=Nixarchy
+Description=Nixarchy splash screen.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/nixarchy
+ScriptFile=/usr/share/plymouth/themes/nixarchy/nixarchy.script
+ConsoleLogBackgroundColor=0x1a1b26

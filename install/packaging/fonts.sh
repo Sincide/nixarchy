@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Omarchy logo in a font for Waybar use
+# Nixarchy logo in a font for Waybar use
 mkdir -p ~/.local/share/fonts
-cp ~/.local/share/omarchy/config/omarchy.ttf ~/.local/share/fonts/
+cp ~/nixarchy/config/nixarchy.ttf ~/.local/share/fonts/
 fc-cache

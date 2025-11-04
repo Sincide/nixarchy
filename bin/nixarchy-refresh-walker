@@ -1,0 +1,4 @@
+#!/bin/bash
+
+nixarchy-refresh-config walker/config.toml
+nixarchy-restart-walker

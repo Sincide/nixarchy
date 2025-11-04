@@ -1,36 +1,34 @@
 #!/bin/bash
 
-ansi_art='                 ▄▄▄                                                   
- ▄█████▄    ▄███████████▄    ▄███████   ▄███████   ▄███████   ▄█   █▄    ▄█   █▄ 
+ansi_art='                 ▄▄▄
+ ▄█████▄    ▄███████████▄    ▄███████   ▄███████   ▄███████   ▄█   █▄    ▄█   █▄
 ███   ███  ███   ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
 ███   ███  ███   ███   ███  ███   ███  ███   ███  ███   █▀   ███   ███  ███   ███
 ███   ███  ███   ███   ███ ▄███▄▄▄███ ▄███▄▄▄██▀  ███       ▄███▄▄▄███▄ ███▄▄▄███
 ███   ███  ███   ███   ███ ▀███▀▀▀███ ▀███▀▀▀▀    ███      ▀▀███▀▀▀███  ▀▀▀▀▀▀███
 ███   ███  ███   ███   ███  ███   ███ ██████████  ███   █▄   ███   ███  ▄██   ███
 ███   ███  ███   ███   ███  ███   ███  ███   ███  ███   ███  ███   ███  ███   ███
- ▀█████▀    ▀█   ███   █▀   ███   █▀   ███   ███  ███████▀   ███   █▀    ▀█████▀ 
+ ▀█████▀    ▀█   ███   █▀   ███   █▀   ███   ███  ███████▀   ███   █▀    ▀█████▀
                                        ███   █▀                                  '
 
 clear
 echo -e "\n$ansi_art\n"
 
-sudo pacman -Sy --noconfirm --needed git
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Use custom repo if specified, otherwise default to basecamp/omarchy
-OMARCHY_REPO="${OMARCHY_REPO:-basecamp/omarchy}"
-
-echo -e "\nCloning Omarchy from: https://github.com/${OMARCHY_REPO}.git"
-rm -rf ~/.local/share/omarchy/
-git clone "https://github.com/${OMARCHY_REPO}.git" ~/.local/share/omarchy >/dev/null
-
-# Use custom branch if instructed, otherwise default to master
-OMARCHY_REF="${OMARCHY_REF:-master}"
-if [[ $OMARCHY_REF != "master" ]]; then
-  echo -e "\eUsing branch: $OMARCHY_REF"
-  cd ~/.local/share/omarchy
-  git fetch origin "${OMARCHY_REF}" && git checkout "${OMARCHY_REF}"
-  cd -
+# Ensure we're running from ~/nixarchy
+if [[ "$SCRIPT_DIR" != "$HOME/nixarchy" ]]; then
+  echo "Error: This script must be run from ~/nixarchy"
+  echo "Current location: $SCRIPT_DIR"
+  echo ""
+  echo "Please either:"
+  echo "  1. Move this directory to ~/nixarchy, or"
+  echo "  2. Create a symlink: ln -s $SCRIPT_DIR ~/nixarchy"
+  exit 1
 fi
 
-echo -e "\nInstallation starting..."
-source ~/.local/share/omarchy/install.sh
+echo -e "\nInstallation starting from ~/nixarchy..."
+echo -e "All files will be symlinked from this directory.\n"
+
+source ~/nixarchy/install.sh

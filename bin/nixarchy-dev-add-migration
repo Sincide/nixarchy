@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd ~/.local/share/nixarchy
+migration_file="$HOME/.local/share/nixarchy/migrations/$(git log -1 --format=%cd --date=unix).sh"
+touch $migration_file
+nvim $migration_file

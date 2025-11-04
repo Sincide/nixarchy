@@ -1,0 +1,5 @@
+#!/bin/bash
+
+nixarchy-refresh-config waybar/config.jsonc
+nixarchy-refresh-config waybar/style.css
+nixarchy-restart-waybar

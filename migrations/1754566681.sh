@@ -1,7 +1,7 @@
 echo "Make new Osaka Jade theme available as new default"
 
-if [[ ! -L ~/.config/omarchy/themes/osaka-jade ]]; then
-  rm -rf ~/.config/omarchy/themes/osaka-jade
-  git -C ~/.local/share/omarchy checkout -f themes/osaka-jade
-  ln -nfs ~/.local/share/omarchy/themes/osaka-jade ~/.config/omarchy/themes/osaka-jade
+if [[ ! -L ~/.config/nixarchy/themes/osaka-jade ]]; then
+  rm -rf ~/.config/nixarchy/themes/osaka-jade
+  git -C ~/nixarchy checkout -f themes/osaka-jade
+  ln -nfs ~/nixarchy/themes/osaka-jade ~/.config/nixarchy/themes/osaka-jade
 fi

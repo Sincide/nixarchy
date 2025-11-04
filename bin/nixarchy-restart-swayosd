@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nixarchy-restart-app swayosd-server

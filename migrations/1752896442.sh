@@ -4,6 +4,6 @@ if ! command -v wiremix &>/dev/null; then
   sudo pacman -S --noconfirm --needed wiremix
   sudo pacman -Rns --noconfirm pavucontrol
 
-  omarchy-refresh-applications
-  omarchy-refresh-waybar
+  nixarchy-refresh-applications
+  nixarchy-refresh-waybar
 fi
