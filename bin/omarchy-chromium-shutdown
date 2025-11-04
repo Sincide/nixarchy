@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+echo "[$(date +%s.%N)] Script started, PID=$$"
+
+__browsers="chrome|chromium|brave|vivaldi|opera|microsoft-edge|microsoft-edge-stable|microsoft-edge-beta|microsoft-edge-dev|ungoogled-chromium|iron|slimjet|yandex_browser|yandex-browser|comodo|iridium|coccoc"
+
+__running=$(pgrep -x "$__browsers" 2>/dev/null || true)
+
+if [ -z "$__running" ]; then
+    echo "[$(date +%s.%N)] No browsers were running, exitting..."
+    exit 0
+fi
+
+echo "[$(date +%s.%N)] Sending SIGTERM"
+pkill -15 -x "$__browsers" 2>/dev/null || true
+echo "[$(date +%s.%N)] SIGTERM sent"
+
+sleep 3
+echo "[$(date +%s.%N)] Script completed"
+exit 0

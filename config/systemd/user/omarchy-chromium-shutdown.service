@@ -1,0 +1,24 @@
+[Unit]
+Description=Graceful browser shutdown for UWSM session
+DefaultDependencies=no
+
+After=app-graphical.slice
+After=background-graphical.slice
+After=session-graphical.slice
+After=graphical-session.target
+
+Requires=app-graphical.slice
+PartOf=graphical-session.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/true
+ExecStop=%h/.local/bin/omarchy-chromium-shutdown
+TimeoutStopSec=20
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=wayland-session-shutdown.target
+
