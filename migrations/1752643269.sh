@@ -1,5 +1,5 @@
 echo "Add new matte black theme"
 
-if [[ ! -L "~/.config/omarchy/themes/matte-black" ]]; then
-  ln -snf ~/.local/share/omarchy/themes/matte-black ~/.config/omarchy/themes/
+if [[ ! -L "~/.config/archy/themes/matte-black" ]]; then
+  ln -snf ~/archy/themes/matte-black ~/.config/archy/themes/
 fi

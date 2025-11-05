@@ -25,6 +25,7 @@ sudo pacman -S --noconfirm --needed \
   fcitx5-gtk \
   fcitx5-qt \
   fd \
+  fish \
   ffmpegthumbnailer \
   fzf \
   gcc14 \
@@ -71,12 +72,11 @@ sudo pacman -S --noconfirm --needed \
   nvim \
   obs-studio \
   obsidian \
-  omarchy-chromium \
+  archy-chromium \
   pamixer \
   pinta \
   playerctl \
   plocate \
-  plymouth \
   polkit-gnome \
   postgresql-libs \
   power-profiles-daemon \

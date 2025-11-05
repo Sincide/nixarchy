@@ -3,53 +3,54 @@
 # Exit immediately if a command exits with a non-zero status
 set -eE
 
-export PATH="$HOME/.local/share/omarchy/bin:$PATH"
-OMARCHY_INSTALL=~/.local/share/omarchy/install
+# Set ARCHY_PATH to ~/archy
+export ARCHY_PATH="$HOME/archy"
+export PATH="$ARCHY_PATH/bin:$PATH"
+ARCHY_INSTALL="$ARCHY_PATH/install"
 
 # Preparation
-source $OMARCHY_INSTALL/preflight/show-env.sh
-source $OMARCHY_INSTALL/preflight/trap-errors.sh
-source $OMARCHY_INSTALL/preflight/guard.sh
-source $OMARCHY_INSTALL/preflight/chroot.sh
-source $OMARCHY_INSTALL/preflight/repositories.sh
-source $OMARCHY_INSTALL/preflight/migrations.sh
-source $OMARCHY_INSTALL/preflight/first-run-mode.sh
+source $ARCHY_INSTALL/preflight/show-env.sh
+source $ARCHY_INSTALL/preflight/trap-errors.sh
+source $ARCHY_INSTALL/preflight/guard.sh
+source $ARCHY_INSTALL/preflight/chroot.sh
+source $ARCHY_INSTALL/preflight/repositories.sh
+source $ARCHY_INSTALL/preflight/migrations.sh
+source $ARCHY_INSTALL/preflight/first-run-mode.sh
 
 # Packaging
-source $OMARCHY_INSTALL/packages.sh
-source $OMARCHY_INSTALL/packaging/asdcontrol.sh
-source $OMARCHY_INSTALL/packaging/fonts.sh
-source $OMARCHY_INSTALL/packaging/lazyvim.sh
-source $OMARCHY_INSTALL/packaging/webapps.sh
-source $OMARCHY_INSTALL/packaging/tuis.sh
+source $ARCHY_INSTALL/packages.sh
+source $ARCHY_INSTALL/packaging/asdcontrol.sh
+source $ARCHY_INSTALL/packaging/fonts.sh
+source $ARCHY_INSTALL/packaging/lazyvim.sh
+source $ARCHY_INSTALL/packaging/webapps.sh
+source $ARCHY_INSTALL/packaging/tuis.sh
 
 # Configuration
-source $OMARCHY_INSTALL/config/config.sh
-source $OMARCHY_INSTALL/config/theme.sh
-source $OMARCHY_INSTALL/config/branding.sh
-source $OMARCHY_INSTALL/config/git.sh
-source $OMARCHY_INSTALL/config/gpg.sh
-source $OMARCHY_INSTALL/config/timezones.sh
-source $OMARCHY_INSTALL/config/increase-sudo-tries.sh
-source $OMARCHY_INSTALL/config/increase-lockout-limit.sh
-source $OMARCHY_INSTALL/config/ssh-flakiness.sh
-source $OMARCHY_INSTALL/config/detect-keyboard-layout.sh
-source $OMARCHY_INSTALL/config/xcompose.sh
-source $OMARCHY_INSTALL/config/mise-ruby.sh
-source $OMARCHY_INSTALL/config/docker.sh
-source $OMARCHY_INSTALL/config/mimetypes.sh
-source $OMARCHY_INSTALL/config/hardware/network.sh
-source $OMARCHY_INSTALL/config/hardware/fix-fkeys.sh
-source $OMARCHY_INSTALL/config/hardware/bluetooth.sh
-source $OMARCHY_INSTALL/config/hardware/printer.sh
-source $OMARCHY_INSTALL/config/hardware/usb-autosuspend.sh
-source $OMARCHY_INSTALL/config/hardware/ignore-power-button.sh
-source $OMARCHY_INSTALL/config/hardware/nvidia.sh
+source $ARCHY_INSTALL/config/config.sh
+source $ARCHY_INSTALL/config/theme.sh
+source $ARCHY_INSTALL/config/branding.sh
+source $ARCHY_INSTALL/config/fish.sh
+source $ARCHY_INSTALL/config/git.sh
+source $ARCHY_INSTALL/config/gpg.sh
+source $ARCHY_INSTALL/config/timezones.sh
+source $ARCHY_INSTALL/config/increase-sudo-tries.sh
+source $ARCHY_INSTALL/config/increase-lockout-limit.sh
+source $ARCHY_INSTALL/config/ssh-flakiness.sh
+source $ARCHY_INSTALL/config/detect-keyboard-layout.sh
+source $ARCHY_INSTALL/config/xcompose.sh
+source $ARCHY_INSTALL/config/mise-ruby.sh
+source $ARCHY_INSTALL/config/docker.sh
+source $ARCHY_INSTALL/config/mimetypes.sh
+source $ARCHY_INSTALL/config/hardware/network.sh
+source $ARCHY_INSTALL/config/hardware/fix-fkeys.sh
+source $ARCHY_INSTALL/config/hardware/bluetooth.sh
+source $ARCHY_INSTALL/config/hardware/printer.sh
+source $ARCHY_INSTALL/config/hardware/usb-autosuspend.sh
+source $ARCHY_INSTALL/config/hardware/ignore-power-button.sh
+source $ARCHY_INSTALL/config/hardware/nvidia.sh
 
 # Login
-source $OMARCHY_INSTALL/login/plymouth.sh
-source $OMARCHY_INSTALL/login/limine-snapper.sh
-source $OMARCHY_INSTALL/login/alt-bootloaders.sh
+source $ARCHY_INSTALL/login/limine-snapper.sh
 
 # Updates
 sudo updatedb
@@ -59,12 +60,12 @@ sudo pacman -Syu --noconfirm
 
 # Reboot
 clear
-tte -i ~/.local/share/omarchy/logo.txt --frame-rate 920 laseretch
+tte -i ~/archy/logo.txt --frame-rate 920 laseretch
 echo
 echo "You're done! So we're ready to reboot now..." | tte --frame-rate 640 wipe
 
-if sudo test -f /etc/sudoers.d/99-omarchy-installer; then
-  sudo rm -f /etc/sudoers.d/99-omarchy-installer &>/dev/null
+if sudo test -f /etc/sudoers.d/99-archy-installer; then
+  sudo rm -f /etc/sudoers.d/99-archy-installer &>/dev/null
   echo -e "\nRemember to remove USB installer!\n\n"
 fi
 

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-OMARCHY_MIGRATIONS_STATE_PATH=~/.local/state/omarchy/migrations
-mkdir -p $OMARCHY_MIGRATIONS_STATE_PATH
+ARCHY_MIGRATIONS_STATE_PATH=~/.local/state/archy/migrations
+mkdir -p $ARCHY_MIGRATIONS_STATE_PATH
 
-for file in ~/.local/share/omarchy/migrations/*.sh; do
-  touch "$OMARCHY_MIGRATIONS_STATE_PATH/$(basename "$file")"
+for file in ~/archy/migrations/*.sh; do
+  touch "$ARCHY_MIGRATIONS_STATE_PATH/$(basename "$file")"
 done
